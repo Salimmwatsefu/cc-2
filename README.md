@@ -130,7 +130,8 @@ appropriate (i.e. `has_many`, `has_many through`, and `belongs_to`).
   - returns a collection of all the Products that the User has reviewed
 
 Use `rake console` and check that these methods work before proceeding. For
-example, you should be able to call `User.first.products` and see a list of the
+example, you should be able to call `has_many :reviews
+    has_many :products, through: :reviews `User.first.products` and see a list of the
 products for the first user in the database based on your seed data; and
 `Review.first.user` should return the user for the first review in the database.
 
